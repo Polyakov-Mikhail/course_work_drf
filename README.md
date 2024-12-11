@@ -20,8 +20,7 @@ cp .env.example .env
 ```
 ### 3. Установление зависимостей
 ```bash
-poetry shell
-poetry install
+pip install -r requirements.txt
 ```
 ### 4. Запуск миграций
 Чтобы запустить миграции, используйте следующую команду:
@@ -47,15 +46,3 @@ python3 manage.py runserver
 coverage run manage.py test
 coverage report
    ```
-
-### 8. Запуск Celery Worker
-Чтобы запустить Celery worker, используйте следующую команду:
-```bash
-celery -A habit_reminder worker --loglevel=info
-```
-
-### 9. Запуск Celery Beat
-Чтобы запустить Celery Beat scheduler, используйте следующую команду:
-```bash
-celery -A habit_reminder beat --loglevel=info
-```
